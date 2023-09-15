@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
+    font-family:'Poppins-Regular.ttf';
+}
+body {
+    font-family: 'Poppins-Regular.ttf';
+    color: white;
+    background-color: black;
+}
+/*Beginning of header section styles*/
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/background-image.jpg);
+    /*background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    padding: 20px 12%;
+    position: relative;
+    object-fit: cover;
+}
+.logo img {
+    width: 150px;
+    cursor: pointer;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button {
+    padding: 8px 15px;
+    background-color: red;
+    border: none;
+    border-radius: 4px;
+}
+nav button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+nav button:hover {
+  background-color: rgb(210, 24, 24);
+}
+.header-container-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 50px;
+}
+.header-container-text h1 {
+    font-size: 2.8rem;
+    max-width: 650px;
+}
+.header-container-text h3 {
+    font-weight: 400;
+    margin-bottom: 17px;
+}
+form {
+    margin-top: 15px;
+}
+form input {
+    padding: 15px 200px 15px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(103, 103, 103);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 8px;
+}
+form button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: rgb(210, 24, 24);
+}
+/*End  of header section styles*/
+
+/*Beginning of features section styles*/
+.netflix-feature-section {
+    padding: 40px 12%;
+    font-size: 1.5rem;
+    border-top: 10px solid rgb(57, 57, 57);
+}
+.netflix-feature-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.netflix-feature-section h2 {
+    font-size: 3rem;
+    font-weight: 900
+}
+.netflix-feature-container img {
+    width: 500px;
+}
+/*End of features section styles*/
+
+/*Beginning of frequently asked questions*/
+.Frequently-asked-question {
+    padding: 40px 12%;
+    text-align: center;
+    font-size: 1.2rem;
+    border-top: 10px solid rgb(57, 57, 57);
+}
+.Frequently-asked-question h2 {
+    font-size: 3rem;
+}
+.accordion {
+    margin: 40px auto;
+    width: 100%;
+}
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    background: rgb(57, 57, 57);
+    padding: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.accordion li label:hover {
+    background-color: rgb(81, 81, 81);
+}
+label::after{
+    content: '+';
+    font-size: 3rem;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"] {
+    display: none;
+}
+.accordion .content {
+    background: rgb(57, 57, 57);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s;
+}
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 20px 30px;
+}
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+/*End of frequently asked questions*/
+
+/*Beginning of footer section style*/
+.footer-section {
+    border-top: 10px solid rgb(57, 57, 57);
+    padding: 50px 12%;
+}
+.footer-header-text {
+    margin-bottom: 30px;
+}
+.footer-header-text a {
+    color: rgb(173, 173, 173);
+}
+.footer-header-text h4 {
+    font-weight: 400;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-links ul{
+    list-style: none;
+}
+.footer-links li {
+    padding-bottom: 10px;
+}
+.footer-links li a {
+    color: rgb(173, 173, 173);
+}
+footer .language-btn {
+    display: flex;
+    gap: 12px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgba(134, 133, 133, 0.1);
+    padding: 7px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*Beginning of footer section style*/
+
+
+/* Media Queries for smaller screens*/
+@media only screen and (max-width: 600px) {
+    .logo img {
+        width: 100px;
+    }
+    .header-container-text h1 {
+        font-size: 2rem;
+    }
+    header {
+        height: 60vh;
+    }
+    .header-container-text h3 {
+        font-size: 1rem;
+    }
+    .header-container-text p{
+        font-size: 1.2rem;
+    }
+    form input {
+        padding: 13px 100px 13px 10px;
+        margin-bottom: 10px;
+    }
+    .netflix-feature-container {
+        flex-direction: column;
+    }
+    .Reverse {
+        flex-direction: column-reverse;
+    }
+    .netflix-feature-section h2 {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .netflix-feature-section p {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .netflix-feature-container img {
+        width: 250px;
+    }
+    .Frequently-asked-question h2 {
+        font-size: 1.25rem;
+    }
+    .accordion .content {
+        font-size: 0.8rem;
+    }
+    .accordion li label {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    label::after {
+        font-size: 1.3rem;
+    }
+}
